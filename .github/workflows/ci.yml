@@ -33,10 +33,10 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew build
 
-    - name: Build and push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v4
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: ${{ secrets.DOCKER_USERNAME }}/gradle
+        image: spartamonk/gradle
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
