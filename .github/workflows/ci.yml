@@ -34,7 +34,7 @@ jobs:
       run: ./gradlew build
 
     - name: Build and push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v4
+      uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: ${{ secrets.DOCKER_USERNAME }}/gradle
         registry: docker.io
